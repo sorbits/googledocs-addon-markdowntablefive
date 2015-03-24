@@ -68,7 +68,7 @@ the HTML files must match exact names given. Otherwise, HtmlService cannot impor
 
 #### COPY AND PASTE
 
-  + Copy all the contents of [**MarkdownTableMaker.gs**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMaker.gs) and paste them into **obj.gs**.
+  + Copy all the contents of [**MarkdownTableMaker.gs**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMakerThree.gs) and paste them into **obj.gs**.
   + Copy all the contents of [**MarkdownTableMakerAddOn.gs**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMakerAddOn.gs) and paste them into **addon.gs**.
   + Copy all the contents of [**MarkdownTableMakerSidebar.html**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMakerSidebar.html) and paste them into **MarkdownTableMakerSidebar.html**.
 
