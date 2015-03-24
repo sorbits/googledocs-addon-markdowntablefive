@@ -1,6 +1,6 @@
 # googledocs-addon-markdowntablethree
 
-![pffy-googledocs-addon-wikitableworks-2](https://cloud.githubusercontent.com/assets/7258373/6681435/cd42f8b2-cc23-11e4-9c83-877550fb1e9e.png)
+![pffy-googledocs-addon-markdowntablemaker-2](https://cloud.githubusercontent.com/assets/7258373/6681435/cd42f8b2-cc23-11e4-9c83-877550fb1e9e.png)
 
 ## ABOUT
 
@@ -68,7 +68,7 @@ the HTML files must match exact names given. Otherwise, HtmlService cannot impor
 
 #### COPY AND PASTE
 
-  + Copy all the contents of [**MarkdownTableMaker.gs**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMakerThree.gs) and paste them into **obj.gs**.
+  + Copy all the contents of [**MarkdownTableMakerThree.gs**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMakerThree.gs) and paste them into **obj.gs**.
   + Copy all the contents of [**MarkdownTableMakerAddOn.gs**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMakerAddOn.gs) and paste them into **addon.gs**.
   + Copy all the contents of [**MarkdownTableMakerSidebar.html**](https://raw.githubusercontent.com/pffy/googledocs-addon-markdowntablethree/master/MarkdownTableMakerSidebar.html) and paste them into **MarkdownTableMakerSidebar.html**.
 
