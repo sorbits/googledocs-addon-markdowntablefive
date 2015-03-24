@@ -2,17 +2,8 @@
 
 ![pffy-googledocs-addon-wikitableworks-2](https://cloud.githubusercontent.com/assets/7258373/6681435/cd42f8b2-cc23-11e4-9c83-877550fb1e9e.png)
 
-<<<<<<< HEAD
 ## ABOUT
-=======
-[![pffy-googledocs-addon-markdownthree-2](https://cloud.githubusercontent.com/assets/7258373/6681435/cd42f8b2-cc23-11e4-9c83-877550fb1e9e.png)](https://github.com/pffy/googledocs-addon-markdowntablethree/issues/1)
 
-
-[![pffy-googledocs-addon-markdownthree-2](https://cloud.githubusercontent.com/assets/7258373/6681435/cd42f8b2-cc23-11e4-9c83-877550fb1e9e.png)](https://github.com/pffy/googledocs-addon-markdowntablethree/issues/1)
-
-
-## GETTING STARTED
->>>>>>> origin/master
 
   + MarkdownTableMaker.
   + [Google Spreadsheets](http://www.google.com/sheets/about/) Add-On.
@@ -49,7 +40,7 @@
 
 ### MANUAL INSTALL
 
-> **NOTE:** MANUAL INSTALLS ARE FOR DEVELOPERS OR POWER USERS.
+> **NOTE:** Manual installs are for developers or power users.
 
   + You can build your own copy of the app using the Google Docs Script Editor.
   + First, you will setup the project containers. Next, you will copy and paste the code. Finally, you will finish the install by closing the editor, refreshing the spreadsheet and authorizing the add-on.
