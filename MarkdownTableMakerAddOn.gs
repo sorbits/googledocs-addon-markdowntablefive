@@ -34,37 +34,38 @@
  *
  *
  * @license The Unlicense http://unlicense.org/
- * @version 3.1
- * @updated 2015-03-12
+ * @version 3.1.1
+ * @updated 2015-03-19
  * @author  The Pffy Authors https://github.com/pffy/
  * @link    https://github.com/pffy/googledocs-addon-markdowntablethree
  *
  */
 var product = {
-  
+
   "name": "MarkdownTableMaker",
-  "version": "3.1",
-  
+  "version": "3.1.1",
+
   "license": "This is free, libre and open source software.",
   "licenseUrl": "http://unlicense.org/",
-  
+
   "author": "The Pffy Authors",
   "authorUrl": "https://github.com/pffy",
-  
+
   "sidebarTitle": "MarkdownTableMaker",
   "sidebarFilename": "MarkdownTableMakerSidebar",
 
   "exportTextFileExtension": ".txt",
-  "exportMarkdownFileExtension": ".md",  
+  "exportMarkdownFileExtension": ".md",
   "exportPrefix": "Markdown-",
-  
-  "convertMenuItem": "Convert range to Markdown table...",
-  
-  "tagline": "Live long and prosper." 
+
+  "convertMenuItem": "Convert range to table...",
+  "loading": "Loading...",
+
+  "tagline": "Live long and prosper."
 }
 
 var menuItems = {
-  "convert": "Convert range to Markdown table ...",
+  "convert": "Convert range to table ...",
   "derp": "derp"
 }
 
@@ -73,41 +74,33 @@ var menuItems = {
  * Add-On UI/Menus
  **/
 
-
-
 // saves spreadsheet selection as markdown, returns Google Drive URL
 function saveAsMarkdown() {
-  
-  var outfile = product.exportPrefix + '-' 
-    + _getSheetName() + '-' 
-    + _generateFileId() + product.exportMarkdownFileExtension;
-  
-  var drv = DriveApp.createFile(outfile, '' + _convertMarkdown());
-  return drv.getUrl();
-}
 
-// saves spreadsheet selection as text, returns Google Drive URL
-// EXPERIMENTAL: might be removed
-function saveAsText() {
-  
-  var outfile = product.exportPrefix + '-' 
-    + _getSheetName() + '-' 
-    + _generateFileId() + product.exportTextFileExtension;
-  
-  var drv = DriveApp.createFile(outfile, 
+  var outfile = product.exportPrefix + '-'
+    + _getSheetName() + '-'
+    + _generateFileId() + product.exportMarkdownFileExtension;
+
+  var drv = DriveApp.createFile(outfile,
     '' + _convertMarkdown(), MimeType.PLAIN_TEXT);
+
   return drv.getUrl();
 }
 
 // handles convert menu item
 function _convertItem() {
 
+//  SpreadsheetApp.getActiveSpreadsheet().toast('', product.loading, 2);
+
   var ui = HtmlService
     .createHtmlOutputFromFile(product.sidebarFilename)
     .setTitle(product.sidebarTitle);
 
-  ui.append('<div class="wrapper"><h2>Copy and Paste (READ-ONLY):</h2>'
-    + '<textarea READONLY>' + _convertMarkdown() + '</textarea></div>');
+  ui.append('<div class="wrapper">'
+    + '<textarea READONLY>' + _convertMarkdown() + '</textarea></br/>'
+    + '<button class="action" onClick="saveMd();">Save As Markdown</button>'
+    + '<div id="msg">&nbsp;</div>'
+  );
 
   SpreadsheetApp.getUi()
     .showSidebar(ui);
@@ -124,7 +117,7 @@ function _getSheetName() {
   return SpreadsheetApp.getActiveSpreadsheet().getName();
 }
 
-// returns file id using date and time
+// returns file id based on date and time
 function _generateFileId() {
   return Utilities.formatDate(new Date(), "PST", "yyyymmdd-HHmmss");
 }
@@ -135,4 +128,9 @@ function onOpen() {
   ui.createAddonMenu()
       .addItem(menuItems.convert, '_convertItem')
       .addToUi();
+}
+
+// automatic start after install
+function onInstall() {
+  onOpen();
 }

@@ -32,14 +32,14 @@
  * Provides HTML sidebar preview for table conversion.
  *
  * @license The Unlicense http://unlicense.org/
- * @version 3.1
- * @updated 2015-03-16
+ * @version 3.1.1
+ * @updated 2015-03-19
  * @author  The Pffy Authors https://github.com/pffy/
  * @link    https://github.com/pffy/googledocs-addon-markdowntablethree
  *
  */
 -->
-<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+
 <style type="text/css">
 
 h2 {
@@ -64,6 +64,13 @@ textarea {
   height: 300px;
 }
 
+img.spinner {
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+}
+
 </style>
 
 <script>
@@ -71,56 +78,39 @@ textarea {
   /**
     * Asynchronous client-side methods
     */
-  function saveMd() { 
-    onAction();
+  function saveMd() {
+    onSavingMarkdown();
     google.script.run.withFailureHandler(onFailure)
-      .withSuccessHandler(onSaved)
+      .withSuccessHandler(onSavedMarkdown)
       .saveAsMarkdown();
   }
 
-  function saveTxt() {
-    onAction();
-    google.script.run.withFailureHandler(onFailure)
-      .withSuccessHandler(onSaved)
-      .saveAsText();  
-  }
-  
   /**
     * Callback functions
     */
-  function onSaved(url) {
-    var msg = document.getElementById('msgs');
-    msg.innerHTML = '<br/>Saved! <b><a href="' + url + '">View file</a></b> in Google Drive.';
+  function onSavedMarkdown(url) {
+    var m = document.getElementById('msg');
+    m.innerHTML = '<br/>Saved as Markdown! <b><a href="' + url + '">View file</a></b> in Google Drive.';
   }
-  
+
   function onFailure() {
-    var msg = document.getElementById('msgs');
-    msg.innerHTML = '<br/><b>Oops! Your file did not save.</b>';
+    var m = document.getElementById('msg');
+    m.innerHTML = '<br/><b>Oops! Your file did not save.</b>';
   }
-  
+
   /**
     * Helper functions
     */
-  function onAction() {
-    var msg = document.getElementById('msgs');
-    msg.innerHTML = '<br/><b>Saving...</b>';
+  function onSavingMarkdown() {
+    var m = document.getElementById('msg');
+    m.innerHTML = '<br/>'
+      + '<img src="https://539c9773c55655b764378b26faa34869ae0cb65b-www.googledrive.com/host/0B3F4Yv4zuwaSLXFxZVB4U2stSjQ"'
+      + '  title="loading" alt="loading" width="25" height="25" class="spinner" />'
+      + '<b>Saving...</b>';
   }
-  
-  
+
+
 </script>
 
-<div id="wrap">
-  
-  <!-- Save As Markdown or Text file -->
-  <h2>Save As:</h2>
-
-  <!-- buttons -->
-  <button class="action" onClick="saveMd();">Markdown</button>
-  <button onClick="saveTxt();">Text</button>
-
-  <!-- messages for user -->
-  <div id="msgs">&nbsp;</div>  
-
-</div>
-
 <!-- appended divs below -->
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
