@@ -37,7 +37,7 @@
 
 ### CHROME WEB STORE INSTALL
 
-  + [Install MarkdownTableMaker][storpage] from Google Chrome Web Store.
+  + [Install MarkdownTableMaker][storepage] from Google Chrome Web Store.
   + https://chrome.google.com/webstore/detail/markdowntablemaker/cofkbgfmijanlcdooemafafokhhaeold
   + **Recommended.**
     + Apps and add-ons are actively [monitored and curated by Google][goog_monitor].
@@ -47,7 +47,7 @@
 
 ### MANUAL INSTALL
 
-> NOTE: Open beta program has concluded. Please use Google Chrome Web Store.
+> **NOTE:** Supported open beta program has concluded. Please use Google Chrome Web Store.
 
 
 ## PERMISSIONS
@@ -92,7 +92,7 @@ For more information, please refer to <http://unlicense.org>
 
 
 [splash]: https://cloud.githubusercontent.com/assets/7258373/6681435/cd42f8b2-cc23-11e4-9c83-877550fb1e9e.png
-[google_sheets]: http://www.google.com/sheets/about/
+[goog_sheets]: http://www.google.com/sheets/about/
 [wiki_markdown]: http://en.wikipedia.org/wiki/Markdown
 [gh_markdowntablefive]: https://github.com/pffy/googlescript-markdowntablethree/
 [fsf]: https://www.gnu.org/philosophy/free-sw.html
