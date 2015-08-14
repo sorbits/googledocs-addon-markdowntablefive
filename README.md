@@ -91,7 +91,7 @@ For more information, please refer to <http://unlicense.org>
 ```
 
 
-[splash]: https://cloud.githubusercontent.com/assets/7258373/6681435/cd42f8b2-cc23-11e4-9c83-877550fb1e9e.png
+[splash]: https://cloud.githubusercontent.com/assets/7258373/9272973/65887e38-423c-11e5-93be-38abd6e1556d.png
 [goog_sheets]: http://www.google.com/sheets/about/
 [wiki_markdown]: http://en.wikipedia.org/wiki/Markdown
 [gh_markdowntablefive]: https://github.com/pffy/googlescript-markdowntablethree/
