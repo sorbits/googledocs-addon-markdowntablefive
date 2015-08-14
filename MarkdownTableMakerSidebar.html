@@ -1,44 +1,5 @@
-<!--
-/**
- * This is free and unencumbered software released into the public domain.
- *
- * Anyone is free to copy, modify, publish, use, compile, sell, or
- * distribute this software, either in source code form or as a compiled
- * binary, for any purpose, commercial or non-commercial, and by any
- * means.
- *
- * In jurisdictions that recognize copyright laws, the author or authors
- * of this software dedicate any and all copyright interest in the
- * software to the public domain. We make this dedication for the benefit
- * of the public at large and to the detriment of our heirs and
- * successors. We intend this dedication to be an overt act of
- * relinquishment in perpetuity of all present and future rights to this
- * software under copyright law.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
- * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- *
- * For more information, please refer to <http://unlicense.org/>
- */
-
-/**
- * MarkdownTableMakerSidebar.html
- * Designed for Google Drive Spreadsheets
- * Provides HTML sidebar preview for table conversion.
- *
- * @license The Unlicense http://unlicense.org/
- * @version 3.1.1
- * @updated 2015-03-19
- * @author  The Pffy Authors https://github.com/pffy/
- * @link    https://github.com/pffy/googledocs-addon-markdowntablethree
- *
- */
--->
+<!-- appended divs below -->
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
 
 <style type="text/css">
 
@@ -46,9 +7,12 @@ h2 {
   font-weight: 900;
 }
 
+button {
+  margin-bottom: 8px;
+}
+
 #wrap, div.wrapper {
-  margin: 5px;
-  padding: 5px;
+  margin: 16px;
 }
 
 table, textarea {
@@ -78,12 +42,34 @@ img.spinner {
   /**
     * Asynchronous client-side methods
     */
-  function saveMd() {
+  function saveMarkdownFromRange() {
     onSavingMarkdown();
     google.script.run.withFailureHandler(onFailure)
       .withSuccessHandler(onSavedMarkdown)
-      .saveAsMarkdown();
+      .saveAsMarkdownFromRange();
   }
+
+  function saveMarkdownFromSheet() {
+    onSavingMarkdown();
+    google.script.run.withFailureHandler(onFailure)
+      .withSuccessHandler(onSavedMarkdown)
+      .saveAsMarkdownFromSheet();
+  }
+
+  /**
+   * Update functions.
+   */
+
+  function updateFromRange() {
+    document.getElementById('msg').innerHTML = getUpdatingSpinner();
+    google.script.run.updateMarkdownFromRange();
+  }
+
+  function updateFrontSheet() {
+    document.getElementById('msg').innerHTML = getUpdatingSpinner();
+    google.script.run.updateMarkdownFromSheet();
+  }
+
 
   /**
     * Callback functions
@@ -103,14 +89,63 @@ img.spinner {
     */
   function onSavingMarkdown() {
     var m = document.getElementById('msg');
-    m.innerHTML = '<br/>'
-      + '<img src="https://539c9773c55655b764378b26faa34869ae0cb65b-www.googledrive.com/host/0B3F4Yv4zuwaSLXFxZVB4U2stSjQ"'
+    m.innerHTML = getSavingSpinner();
+  }
+
+  function getSavingSpinner() {
+    return '<br/>'
+      + '<img src="https://cloud.githubusercontent.com/assets/7258373/7875115/981626ae-056d-11e5-82e0-0552852989ff.gif"'
       + '  title="loading" alt="loading" width="25" height="25" class="spinner" />'
       + '<b>Saving...</b>';
+  }
+
+  function getUpdatingSpinner() {
+    return '<br/>'
+      + '<img src="https://cloud.githubusercontent.com/assets/7258373/7875115/981626ae-056d-11e5-82e0-0552852989ff.gif"'
+      + '  title="loading" alt="loading" width="25" height="25" class="spinner" />'
+      + '<b>Updating...</b>';
   }
 
 
 </script>
 
-<!-- appended divs below -->
-<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+
+<!--
+/**
+ * This is free and unencumbered software released into the public domain.
+ *
+ * Anyone is free to copy, modify, publish, use, compile, sell, or
+ * distribute this software, either in source code form or as a compiled
+ * binary, for any purpose, commercial or non-commercial, and by any
+ * means.
+ *
+ * In jurisdictions that recognize copyright laws, the author or authors
+ * of this software dedicate any and all copyright interest in the
+ * software to the public domain. We make this dedication for the benefit
+ * of the public at large and to the detriment of our heirs and
+ * successors. We intend this dedication to be an overt act of
+ * relinquishment in perpetuity of all present and future rights to this
+ * software under copyright law.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * For more information, please refer to <http://unlicense.org/>
+ */
+
+
+
+/**
+ * name     : MarkdowntTableMavenSidebar.html
+ * version  : -
+ * updated  : 2015-08-14
+ * license  : http://unlicense.org/ The Unlicense
+ * git      : https://github.com/pffy/googledocs-addon-markdowntablethree
+ *
+ */
+-->

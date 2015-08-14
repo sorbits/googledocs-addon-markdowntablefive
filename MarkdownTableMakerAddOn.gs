@@ -26,24 +26,17 @@
  */
 
 /**
- * MarkdownTableMakerAddOn.gs
- * Designed for Google Drive Spreadsheets. Converts a range of
- *  selected values into a GitHub Markdown table by using
- *  the MarkdownTableMaker object. Adds Sidebar preview.
- *  Version 3 offers a streamlined workflow and better user experience.
- *
- *
- * @license The Unlicense http://unlicense.org/
- * @version 3.1.1
- * @updated 2015-03-19
- * @author  The Pffy Authors https://github.com/pffy/
- * @link    https://github.com/pffy/googledocs-addon-markdowntablethree
+ * name     : MarkdownTableMakerAddOn.gs
+ * version  : 3.5
+ * updated  : 2015-08-14
+ * license  : http://unlicense.org/ The Unlicense
+ * git      : https://github.com/pffy/googledocs-addon-markdowntablethree
  *
  */
 var product = {
 
   "name": "MarkdownTableMaker",
-  "version": "3.1.1",
+  "version": "3.5",
 
   "license": "This is free, libre and open source software.",
   "licenseUrl": "http://unlicense.org/",
@@ -65,7 +58,8 @@ var product = {
 }
 
 var menuItems = {
-  "convert": "Convert range to table ...",
+  "convertSheet": "Convert entire sheet to table ...",
+  "convertRange": "Convert range to table ...",
   "derp": "derp"
 }
 
@@ -74,51 +68,109 @@ var menuItems = {
  * Add-On UI/Menus
  **/
 
-// saves spreadsheet selection as markdown, returns Google Drive URL
-function saveAsMarkdown() {
+// updates from Range
+function updateMarkdownFromRange() {
+ convertRange_();
+}
+
+// updates from Sheet
+function updateMarkdownFromSheet() {
+  convertSheet_();
+}
+
+// saves Range as markdown, returns Google Drive URL
+function saveAsMarkdownFromRange() {
 
   var outfile = product.exportPrefix + '-'
-    + _getSheetName() + '-'
-    + _generateFileId() + product.exportMarkdownFileExtension;
+    + getSheetName_() + '-'
+    + generateFileId_() + product.exportMarkdownFileExtension;
 
   var drv = DriveApp.createFile(outfile,
-    '' + _convertMarkdown(), MimeType.PLAIN_TEXT);
+    '' + convertMarkdownFromRange_(), MimeType.PLAIN_TEXT);
 
   return drv.getUrl();
 }
 
-// handles convert menu item
-function _convertItem() {
+// saves Sheet as markdown, returns Google Drive URL
+function saveAsMarkdownFromSheet() {
 
-//  SpreadsheetApp.getActiveSpreadsheet().toast('', product.loading, 2);
+  var outfile = product.exportPrefix + '-'
+    + getSheetName_() + '-'
+    + generateFileId_() + product.exportMarkdownFileExtension;
+
+  var drv = DriveApp.createFile(outfile,
+    '' + convertMarkdownFromSheet_(), MimeType.PLAIN_TEXT);
+
+  return drv.getUrl();
+}
+
+// converts Range, displays sidebar
+function convertRange_() {
 
   var ui = HtmlService
     .createHtmlOutputFromFile(product.sidebarFilename)
     .setTitle(product.sidebarTitle);
 
-  ui.append('<div class="wrapper">'
-    + '<textarea READONLY>' + _convertMarkdown() + '</textarea></br/>'
-    + '<button class="action" onClick="saveMd();">Save As Markdown</button>'
-    + '<div id="msg">&nbsp;</div>'
+  ui.append(''
+    + '<div class="wrapper">'
+    + 'Range Only<br/>'
+    + '  <textarea READONLY>'
+            + convertMarkdownFromRange_().trim() + '</textarea><br/>'
+    + '  <button class="action" onClick="saveMarkdownFromRange();">Save As Markdown</button><br/>'
+    + '  <button onClick="updateFromRange();">Update</button>'
+    + '  <div id="msg">&nbsp;</div>'
+    + '</div><!--div.wrapper->'
   );
 
   SpreadsheetApp.getUi()
     .showSidebar(ui);
 }
 
-// converts range to markdown, returns markdown
-function _convertMarkdown() {
+// converts entire sheet, displays sidebar
+function convertSheet_() {
+
+  var ui = HtmlService
+    .createHtmlOutputFromFile(product.sidebarFilename)
+    .setTitle(product.sidebarTitle);
+
+  ui.append(''
+    + '<div class="wrapper">'
+    + 'Entire Sheet<br/>'
+    + '  <textarea READONLY>'
+            + convertMarkdownFromSheet_().trim() + '</textarea><br/>'
+    + '  <button class="action" onClick="saveMarkdownFromSheet();">Save As Markdown</button><br/>'
+    + '  <button onClick="updateFromSheet();">Update</button>'
+    + '  <div id="msg">&nbsp;</div>'
+    + '</div><!--div.wrapper->'
+  );
+
+  SpreadsheetApp.getUi()
+    .showSidebar(ui);
+}
+
+// converts Markdown from the active Range
+function convertMarkdownFromRange_() {
+  Logger.log('range');
   var range = SpreadsheetApp.getActiveSheet().getActiveRange();
-  return '' + new MarkdownTableMaker(range);
+  var mtm = MarkdownTableMaker();
+  mtm.setRange(range);
+  return '' + mtm;
+}
+
+// converts Markdown from entire Sheet
+function convertMarkdownFromSheet_() {
+  var mtm = MarkdownTableMaker();
+  mtm.setSheetAsRange();
+  return '' + mtm;
 }
 
 // returns name of the container spreadsheet
-function _getSheetName() {
+function getSheetName_() {
   return SpreadsheetApp.getActiveSpreadsheet().getName();
 }
 
 // returns file id based on date and time
-function _generateFileId() {
+function generateFileId_() {
   return Utilities.formatDate(new Date(), "PST", "yyyymmdd-HHmmss");
 }
 
@@ -126,7 +178,8 @@ function _generateFileId() {
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createAddonMenu()
-      .addItem(menuItems.convert, '_convertItem')
+      .addItem(menuItems.convertRange, 'convertRange_')
+      .addItem(menuItems.convertSheet, 'convertSheet_')
       .addToUi();
 }
 
