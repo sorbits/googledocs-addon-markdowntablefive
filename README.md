@@ -5,7 +5,8 @@
 ## ABOUT
 
   + MarkdownTableMaker.
-  + Version 3.5.
+  + Version 3.5
+  + (Release 5 in Chrome Web Store)
   + [Google Spreadsheets][goog_sheets] Add-On.
   + Converts Google Sheets (Google Docs Spreadsheets) selection into a Markdown table.
   + Uses: Markdown tables on GitHub, reddit, StackExchange, etc.
