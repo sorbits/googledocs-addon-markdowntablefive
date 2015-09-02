@@ -5,8 +5,8 @@
 ## ABOUT
 
   + MarkdownTableMaker.
-  + Version 3.5
-  + (Release 5 in Chrome Web Store)
+  + Version 6
+  + (Release 6 in Chrome Web Store)
   + [Google Spreadsheets][goog_sheets] Add-On.
   + Converts Google Sheets (Google Docs Spreadsheets) selection into a Markdown table.
   + Uses: Markdown tables on GitHub, reddit, StackExchange, etc.
@@ -29,6 +29,7 @@
 ## FEATURES
 
   + Detects bold, italic and strikethrough font styles. Converts them to Markdown.
+  + Detects multi-line cells. Converts them to [Markdown Line Breaks][gh_linebreaks].
   + Detects HYPERLINK formulas with URLs and Titles. Converts to Markdown links: `[title](url)`
   + Detects table column alignment for first row of a selected range. Applied in Markdown.
   + Detects monospace type (Courier New) and converts text to `inline syntax`, with back-ticks.
@@ -102,3 +103,4 @@ For more information, please refer to <http://unlicense.org>
 [storepage]: https://chrome.google.com/webstore/detail/markdowntablemaker/cofkbgfmijanlcdooemafafokhhaeold
 [storeicon]: https://cloud.githubusercontent.com/assets/7258373/6788162/ee497942-d154-11e4-934d-ef386061181d.png
 [cws_stackedit]: https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg
+[gh_linebreaks]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#line-breaks
