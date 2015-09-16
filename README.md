@@ -1,6 +1,6 @@
 # googledocs-addon-markdowntablethree
 
-![markdown table maker 3.5][splash]
+![markdown table maker][splash]
 
 ## ABOUT
 
