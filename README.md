@@ -15,6 +15,7 @@
   + Edit the Markdown file with compatible third-party Drive apps (e.g., [StackEdit][cws_stackedit]).
   + Uses the [MarkdownTableMaker][gh_markdowntablefive] object.
   + Written in Google Apps Script.
+  + You can also [render Markdown][gh_render] elsewhere with the GitHub API.
 
 
 ## DETAILS
@@ -92,7 +93,7 @@ For more information, please refer to <http://unlicense.org>
 
 ```
 
-
+[gh_render]: https://developer.github.com/v3/markdown/
 [splash]: https://cloud.githubusercontent.com/assets/7258373/9272973/65887e38-423c-11e5-93be-38abd6e1556d.png
 [goog_sheets]: http://www.google.com/sheets/about/
 [wiki_markdown]: http://en.wikipedia.org/wiki/Markdown
