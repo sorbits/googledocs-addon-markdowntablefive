@@ -1,15 +1,13 @@
 # MarkdownTableMaker Google Sheets Add-On
 
-![markdown table maker][splash]
-
 ## ABOUT
 
-  + MarkdownTableMaker.
-  + Version 6
-  + (Release 6 in Chrome Web Store)
-  + [Google Spreadsheets][goog_sheets] Add-On.
+  + MarkdownTableMaker [Google Spreadsheets][goog_sheets] Add-On.
   + Converts Google Sheets (Google Docs Spreadsheets) selection into a Markdown table.
-  + Uses: Markdown tables on GitHub, reddit, StackExchange, etc.
+  + Used on: Markdown tables on GitHub, reddit, StackExchange, enterprise Markdown wikis, etc.
+
+![markdown table maker][splash]
+
   + Wait... What is [Markdown][wiki_markdown]?
   + Save table to Google Drive with the `.md` file extension.
   + Edit the Markdown file with compatible third-party Drive apps (e.g., [StackEdit][cws_stackedit]).
