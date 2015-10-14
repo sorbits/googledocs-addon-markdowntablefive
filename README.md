@@ -1,4 +1,4 @@
-# googledocs-addon-markdowntablethree
+# MarkdownTableMaker Google Sheets Add-On
 
 ![markdown table maker][splash]
 
