@@ -39,7 +39,6 @@
 ### CHROME WEB STORE INSTALL
 
   + [Install MarkdownTableMaker][storepage] from Google Chrome Web Store.
-  + https://chrome.google.com/webstore/detail/markdowntablemaker/cofkbgfmijanlcdooemafafokhhaeold
   + **Recommended.**
     + Apps and add-ons are actively [monitored and curated by Google][goog_monitor].
     + Better add-on management (install, removal, updates).
