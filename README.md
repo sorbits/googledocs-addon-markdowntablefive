@@ -94,7 +94,7 @@ For more information, please refer to <http://unlicense.org>
 [splash]: https://cloud.githubusercontent.com/assets/7258373/9272973/65887e38-423c-11e5-93be-38abd6e1556d.png
 [goog_sheets]: http://www.google.com/sheets/about/
 [wiki_markdown]: http://en.wikipedia.org/wiki/Markdown
-[gh_markdowntablefive]: https://github.com/pffy/googlescript-markdowntablefive/
+[gh_markdowntablefive]: https://github.com/pffy/googlescript-markdowntablefive
 [fsf]: https://www.gnu.org/philosophy/free-sw.html
 [goog_permissions]: https://security.google.com/settings/security/permissions
 [goog_monitor]: https://support.google.com/chrome_webstore/answer/1047776?hl=en
