@@ -139,7 +139,7 @@ function convertSheet_() {
     + '  <textarea READONLY>'
             + convertMarkdownFromSheet_().trim() + '</textarea><br/>'
     + '  <button class="action" onClick="saveMarkdownFromSheet();">Save As Markdown</button><br/>'
-    + '  <button onClick="updateFromSheet();">Update</button>'
+    + '  '
     + '  <div id="msg">&nbsp;</div>'
     + '</div><!--div.wrapper->'
   );
