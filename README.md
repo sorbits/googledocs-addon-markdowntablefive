@@ -66,7 +66,10 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
 |  https://stackedit.io/editor | YES | YES |
 |  https://jbt.github.io/markdown-editor/ | YES | YES |
 |  http://epiceditor.com/ | YES | NO |
+|  http://markable.in/editor/ | YES | NO |
 |  http://dillinger.io/ | NO | YES |
+
+
 
 
 ## PERMISSIONS
