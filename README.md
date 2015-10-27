@@ -21,6 +21,7 @@
   + [INSTALL](#install)
     + [CHROME WEB STORE INSTALL](#chrome-web-store-install)
     + [MANUAL INSTALL](#manual-install)
+  + [USER GUIDE](#user-guide)
   + [PERMISSIONS](#permissions)
   + [LICENSE](#license)
 
@@ -33,6 +34,7 @@
   + Detects table column alignment for first row of a selected range. Applied in Markdown.
   + Detects monospace type (Courier New) and converts text to `inline syntax`, with back-ticks.
   + Auto-crops ranges to row and column boundaries with content in cells.
+  + [Learn more][gh_gettingstarted].
 
 ## INSTALL
 
@@ -49,6 +51,10 @@
 
 > **NOTE:** Supported open beta program has concluded. Please use Google Chrome Web Store.
 
+
+## USER GUIDE
+
+  + Learn more about [MarkdownTableMaker features][gh_gettingstarted] in detail.
 
 ## PERMISSIONS
   + Needs access to Google Docs, Google Drive.
@@ -89,7 +95,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 For more information, please refer to <http://unlicense.org>
 
 ```
-
+[gh_gettingstarted]: https://github.com/pffy/googledocs-addon-markdowntablefive/issues/9
 [gh_render]: https://developer.github.com/v3/markdown/
 [splash]: https://cloud.githubusercontent.com/assets/7258373/9272973/65887e38-423c-11e5-93be-38abd6e1556d.png
 [goog_sheets]: http://www.google.com/sheets/about/
