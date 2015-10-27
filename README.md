@@ -60,12 +60,11 @@
 
 Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown (GFM) editors:
 
-+ Supports multi-line cells:
-  + https://stackedit.io/editor
-  + https://jbt.github.io/markdown-editor/
-
-+ Does not support multi-line cells yet:
-  + http://dillinger.io/
+|  **GitHub Flavored <br/>Markdown Editors** | **Supports<br/>Multi-line cells** |
+|  ------ | :------: |
+|  https://stackedit.io/editor | YES |
+|  https://jbt.github.io/markdown-editor/ | YES |
+|  http://dillinger.io/ | NO |
 
 
 ## PERMISSIONS
