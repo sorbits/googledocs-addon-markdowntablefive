@@ -56,6 +56,18 @@
 
   + Learn more about [MarkdownTableMaker features][gh_gettingstarted] in detail.
 
+## COMPATIBILITY
+
+Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown (GFM) editors:
+
++ Supports multi-line cells:
+  + https://stackedit.io/editor
+  + https://jbt.github.io/markdown-editor/
+
++ Does not support multi-line cells yet:
+  + http://dillinger.io/
+
+
 ## PERMISSIONS
   + Needs access to Google Docs, Google Drive.
   + When you first run the Add-On, Google will request authorization for the app.
