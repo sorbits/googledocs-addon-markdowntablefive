@@ -60,11 +60,13 @@
 
 Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown (GFM) editors:
 
-|  **GitHub Flavored <br/>Markdown Editors** | **Supports<br/>Multi-line cells** |
+|  **GitHub Flavored <br/>Markdown Editors** | **Supports<br/>Multi-line cells** | **Supports<br/>Alignment** |
 |  ------ | :------: |
-|  https://stackedit.io/editor | YES |
-|  https://jbt.github.io/markdown-editor/ | YES |
-|  http://dillinger.io/ | NO |
+|  https://github.com | YES | YES |
+|  https://stackedit.io/editor | YES | YES |
+|  https://jbt.github.io/markdown-editor/ | YES | YES |
+|  http://epiceditor.com/ | YES | NO |
+|  http://dillinger.io/ | NO | YES |
 
 
 ## PERMISSIONS
