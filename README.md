@@ -24,6 +24,7 @@
   + [USER GUIDE](#user-guide)
   + [PERMISSIONS](#permissions)
   + [LICENSE](#license)
+  + [FEEDBACK](#feedback)
 
 
 ## FEATURES
@@ -70,6 +71,8 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
 |  http://dillinger.io/ | NO | YES |
 
 
+[![contact support][helloicon]][hellopage]
+
 
 
 ## PERMISSIONS
@@ -111,6 +114,14 @@ OTHER DEALINGS IN THE SOFTWARE.
 For more information, please refer to <http://unlicense.org>
 
 ```
+
+## FEEDBACK
+
++ [Feedback][hellopage] is greatly appreciated. Please do not include personal contact info in your feedback. Thank you.
+
+
+[hellopage]: https://goo.gl/0um8uY
+[helloicon]:https://raw.githubusercontent.com/pffy/qr/master/png/qrcode-pffy-sayhello.png
 [gh_gettingstarted]: https://github.com/pffy/googledocs-addon-markdowntablefive/issues/9
 [gh_render]: https://developer.github.com/v3/markdown/
 [splash]: https://cloud.githubusercontent.com/assets/7258373/9272973/65887e38-423c-11e5-93be-38abd6e1556d.png
