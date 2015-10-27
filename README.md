@@ -4,7 +4,7 @@
 
   + MarkdownTableMaker [Google Spreadsheets][goog_sheets] Add-On.
   + Converts Google Sheets (Google Docs Spreadsheets) selection into a Markdown table.
-  + Used on: Markdown tables on GitHub, reddit, StackExchange, enterprise Markdown wikis, [etc](#compatibility).
+  + Used on: Markdown tables on GitHub, StackEdit, enterprise Markdown wikis, and [more](#compatibility)...
 
 ![markdown table maker][splash]
 
