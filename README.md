@@ -1,6 +1,6 @@
 # MarkdownTableMaker Google Sheets Add-On
 
-## ABOUT
+### ABOUT
 
   + MarkdownTableMaker [Google Spreadsheets][goog_sheets] Add-On.
   + Converts Google Sheets (Google Docs Spreadsheets) selection into a Markdown table.
@@ -71,10 +71,6 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
 |  http://dillinger.io/ | NO | YES |
 
 
-[![contact support][helloicon]][hellopage]
-
-
-
 ## PERMISSIONS
   + Needs access to Google Docs, Google Drive.
   + When you first run the Add-On, Google will request authorization for the app.
@@ -118,6 +114,8 @@ For more information, please refer to <http://unlicense.org>
 ## FEEDBACK
 
 + [Feedback][hellopage] is greatly appreciated. Please do not include personal contact info in your feedback. Thank you.
+
+[![contact support][helloicon]][hellopage]
 
 
 [hellopage]: https://goo.gl/0um8uY
