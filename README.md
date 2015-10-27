@@ -111,7 +111,7 @@ For more information, please refer to <http://unlicense.org>
 
 ```
 
-## FEEDBACK
+### FEEDBACK
 
 + [Feedback][hellopage] is greatly appreciated. Please do not include personal contact info in your feedback. Thank you.
 
