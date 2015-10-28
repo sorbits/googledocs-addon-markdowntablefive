@@ -65,6 +65,7 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
 |  **GitHub Flavored <br/>Markdown Editors** | **Supports<br/>Multi-line cells** | **Supports<br/>Alignment** |
 |  ------ | :------: | :------: |
 |  https://github.com | YES | YES |
+|  [Atom][gh_atom] by GitHub for Mac | YES | YES |
 |  [StackEdit][cws_stackedit] for Chrome<br/>https://stackedit.io/editor | YES | YES |
 |  [Minimalist Markdown Editor][cws_minimed] for Chrome | YES | YES |
 |  [Mado][cws_mado] for Chrome | YES | YES |
@@ -121,6 +122,7 @@ For more information, please refer to <http://unlicense.org>
 
 [![contact support][helloicon]][hellopage]
 
+[gh_atom]: https://atom.io/
 [cws_minimed]: https://chrome.google.com/webstore/detail/minimalist-markdown-edito/pghodfjepegmciihfhdipmimghiakcjf
 [cws_stackedit]: https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg
 [cws_mado]: https://chrome.google.com/webstore/detail/mado/gmmlaihnodfojphcmjeemhaeajaldcdj
