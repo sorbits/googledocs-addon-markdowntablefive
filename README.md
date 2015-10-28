@@ -66,7 +66,7 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
 |  ------ | :------: | :------: |
 |  https://github.com | YES | YES |
 |  [StackEdit][cws_stackedit] for Chrome<br/>https://stackedit.io/editor | YES | YES |
-|  [Minimalist Markdown Editors][cws_minimed] for Chrome | YES | YES |
+|  [Minimalist Markdown Editor][cws_minimed] for Chrome | YES | YES |
 |  [Mado][cws_mado] for Chrome | YES | YES |
 |  https://jbt.github.io/markdown-editor/ | YES | YES |
 |  http://epiceditor.com/ | YES | NO |
