@@ -122,6 +122,7 @@ For more information, please refer to <http://unlicense.org>
 
 [![contact support][helloicon]][hellopage]
 
+[gh_gfm]: https://help.github.com/articles/github-flavored-markdown/
 [gh_atom]: https://atom.io/
 [cws_minimed]: https://chrome.google.com/webstore/detail/minimalist-markdown-edito/pghodfjepegmciihfhdipmimghiakcjf
 [cws_stackedit]: https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg
