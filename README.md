@@ -22,7 +22,7 @@
     + [CHROME WEB STORE INSTALL](#chrome-web-store-install)
     + [MANUAL INSTALL](#manual-install)
   + [USER GUIDE](#user-guide)
-  + [COMPATIBILITY](#compatiblity)
+  + [COMPATIBILITY](#compatibility)
   + [PERMISSIONS](#permissions)
   + [LICENSE](#license)
   + [FEEDBACK](#feedback)
