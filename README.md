@@ -64,7 +64,9 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
 |  **GitHub Flavored <br/>Markdown Editors** | **Supports<br/>Multi-line cells** | **Supports<br/>Alignment** |
 |  ------ | :------: | :------: |
 |  https://github.com | YES | YES |
+|  [StackEdit][cws_stackedit] for Chrome | YES | YES |
 |  https://stackedit.io/editor | YES | YES |
+|  [Mado][cws_mado] for Chrome | YES | YES |
 |  https://jbt.github.io/markdown-editor/ | YES | YES |
 |  http://epiceditor.com/ | YES | NO |
 |  http://markable.in/editor/ | YES | NO |
@@ -117,7 +119,8 @@ For more information, please refer to <http://unlicense.org>
 
 [![contact support][helloicon]][hellopage]
 
-
+[cws_stackedit]: https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg
+[cws_mado]: https://chrome.google.com/webstore/detail/mado/gmmlaihnodfojphcmjeemhaeajaldcdj
 [hellopage]: https://goo.gl/0um8uY
 [helloicon]:https://raw.githubusercontent.com/pffy/qr/master/png/qrcode-pffy-sayhello.png
 [gh_gettingstarted]: https://github.com/pffy/googledocs-addon-markdowntablefive/issues/9
