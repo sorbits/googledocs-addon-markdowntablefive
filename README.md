@@ -2,7 +2,7 @@
 
 [![chromewebstore_badgewborder_v2_340x96][storeicon]][storepage]
 
-### ABOUT
+## ABOUT
 
   + MarkdownTableMaker [Google Spreadsheets][goog_sheets] Add-On.
   + Converts Google Sheets (Google Docs Spreadsheets) selection into a Markdown table.
