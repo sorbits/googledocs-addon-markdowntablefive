@@ -1,5 +1,7 @@
 # MarkdownTableMaker Google Sheets Add-On
 
+[![chromewebstore_badgewborder_v2_340x96][storeicon]][storepage]
+
 ### ABOUT
 
   + MarkdownTableMaker [Google Spreadsheets][goog_sheets] Add-On.
