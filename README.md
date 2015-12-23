@@ -46,7 +46,7 @@
 
 ## Install
 
-### Chrome Web Store
+### Chrome Web Store Install
 
   + [Install MarkdownTableMaker][storepage] from Google Chrome Web Store.
   + **Recommended.**
