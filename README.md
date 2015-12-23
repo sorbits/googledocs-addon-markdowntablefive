@@ -4,9 +4,10 @@
 
 [![chromewebstore_badgewborder_v2_340x96][storeicon]][storepage]
 
-## ABOUT
+## About
 
   + MarkdownTableMaker [Google Spreadsheets][goog_sheets] Add-On.
+  + Get the [latest release][latest_release].
   + Converts Google Sheets (Google Docs Spreadsheets) selection into a Markdown table.
   + Used on: Markdown tables on GitHub, StackEdit, enterprise Markdown wikis, and [more](#compatibility)...
 
@@ -20,31 +21,32 @@
   + You can also [render Markdown][gh_render] elsewhere with the GitHub API.
 
 
-## DETAILS
-  + [FEATURES](#features)
-  + [INSTALL](#install)
-    + [CHROME WEB STORE INSTALL](#chrome-web-store-install)
-    + [MANUAL INSTALL](#manual-install)
-  + [USER GUIDE](#user-guide)
-  + [COMPATIBILITY](#compatibility)
-  + [PERMISSIONS](#permissions)
-  + [LICENSE](#license)
-  + [FEEDBACK](#feedback)
+## Details
+  + [Features](#features)
+  + [Installs](#install)
+    + [Chrome Web Store Install](#chrome-web-store-install)
+    + [Manual Install](#manual-install)
+  + [User Guide](#user-guide)
+  + [Compatibility](#compatibility)
+  + [Permissions](#permissions)
+  + [License](#license)
+  + [Feedback](#feedback)
 
 
-## FEATURES
+## Features
 
   + Detects bold, italic and strikethrough font styles. Converts them to Markdown.
   + Detects multi-line cells. Converts them to [Markdown Line Breaks][gh_linebreaks].
   + Detects HYPERLINK formulas with URLs and Titles. Converts to Markdown links: `[title](url)`
   + Detects table column alignment for first row of a selected range. Applied in Markdown.
-  + Detects monospace type (Courier New) and converts text to `inline syntax`, with back-ticks.
+  + Detects Google monospace type fonts (e.g, Courier New) and converts text to `inline syntax`, with back-ticks.
   + Auto-crops ranges to row and column boundaries with content in cells.
+  + Converts vertical pipes into inline code syntax to avoid Markdown engine rendering errors.
   + [Learn more][gh_gettingstarted].
 
-## INSTALL
+## Install
 
-### CHROME WEB STORE INSTALL
+### Chrome Web Store
 
   + [Install MarkdownTableMaker][storepage] from Google Chrome Web Store.
   + **Recommended.**
@@ -53,16 +55,16 @@
 
 [![chromewebstore_badgewborder_v2_340x96][storeicon]][storepage]
 
-### MANUAL INSTALL
+### Manual Install
 
 > **NOTE:** Supported open beta program has concluded. Please use Google Chrome Web Store.
 
 
-## USER GUIDE
+## User Guide
 
   + Learn more about [MarkdownTableMaker features][gh_gettingstarted] in detail.
 
-## COMPATIBILITY
+## Compatibility
 
 Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown (GFM) editors:
 
@@ -80,7 +82,7 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
 |  http://dillinger.io/ | NO | YES |
 
 
-## PERMISSIONS
+## Permissions
   + Needs access to Google Docs, Google Drive.
   + When you first run the Add-On, Google will request authorization for the app.
   + If authorization is given,
@@ -89,43 +91,19 @@ Your Markdown table can be copied and pasted into these GitHub-Flavored Markdown
   + You can see why distributing [free software][fsf]
    is so important to your privacy.
 
+## [License][license_link]
 
-## LICENSE
+> **COMPLIANCE OFFICERS:**  This software is released under The Unlicense. For your software compliance paperwork mandated by your corporate policy, you can simply print/save this LICENSE file as proof of our software licensing agreement and completed acquisition. Please consult your legal department or a licensed attorney.
 
-```
-This is free and unencumbered software released into the public domain.
+## Reference
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
++ **Does the name Gruber mean anything to you? It should ring a few bells. Markdown was created by [John Gruber][df_markdown].**
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+[license_link]: LICENSE
+[latest_release]: ../../releases/latest
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
 
-For more information, please refer to <http://unlicense.org>
-
-```
-
-## FEEDBACK
-
-+ [Feedback][hellopage] is greatly appreciated. Please do not include personal contact info in your feedback. Thank you.
-
-[![contact support][helloicon]][hellopage]
-
+[df_markdown]: http://daringfireball.net/projects/markdown/
 [gh_gfm]: https://help.github.com/articles/github-flavored-markdown/
 [gh_atom]: https://atom.io/
 [cws_minimed]: https://chrome.google.com/webstore/detail/minimalist-markdown-edito/pghodfjepegmciihfhdipmimghiakcjf
