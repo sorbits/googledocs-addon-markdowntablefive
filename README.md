@@ -1,4 +1,6 @@
-# MarkdownTableMaker Google Sheets Add-On
+# MarkdownTableMaker
+
+  + Make Markdown tables in Google Sheets.
 
 [![chromewebstore_badgewborder_v2_340x96][storeicon]][storepage]
 
