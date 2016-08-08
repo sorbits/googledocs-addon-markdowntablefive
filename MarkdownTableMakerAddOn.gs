@@ -27,8 +27,8 @@
 
 /**
  * name     : MarkdownTableMakerAddOn.gs
- * version  : 8
- * updated  : 2015-12-22
+ * version  : 9
+ * updated  : 2016-08-08
  * license  : http://unlicense.org/ The Unlicense
  * git      : https://github.com/pffy/googledocs-addon-markdowntablefive
  *
@@ -36,7 +36,7 @@
 var product = {
 
   "name": "MarkdownTableMaker",
-  "version": "8",
+  "version": "9",
 
   "license": "This is free, libre and open source software.",
   "licenseUrl": "http://unlicense.org/",
