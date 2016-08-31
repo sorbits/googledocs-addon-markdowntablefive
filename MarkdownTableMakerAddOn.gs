@@ -27,8 +27,8 @@
 
 /**
  * name     : MarkdownTableMakerAddOn.gs
- * version  : 9
- * updated  : 2016-08-08
+ * version  : 10
+ * updated  : 2016-08-31
  * license  : http://unlicense.org/ The Unlicense
  * git      : https://github.com/pffy/googledocs-addon-markdowntablefive
  *
@@ -36,7 +36,7 @@
 var product = {
 
   "name": "MarkdownTableMaker",
-  "version": "9",
+  "version": "10",
 
   "license": "This is free, libre and open source software.",
   "licenseUrl": "http://unlicense.org/",
@@ -150,7 +150,6 @@ function convertSheet_() {
 
 // converts Markdown from the active Range
 function convertMarkdownFromRange_() {
-  Logger.log('range');
   var range = SpreadsheetApp.getActiveSheet().getActiveRange();
   var mtm = MarkdownTableMaker();
   mtm.setRange(range);
