@@ -2,36 +2,9 @@
 <head>
 </head>
 <body>
-<!-- appended divs below -->
 <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
 
 <style type="text/css">
-
-h2 {
-  font-weight: 900;
-}
-
-button {
-  margin-bottom: 8px;
-}
-
-#wrap, div.wrapper {
-  margin: 16px;
-}
-
-table, textarea {
-  width: 98%;
-}
-
-table, td {
-  border: 1px solid silver;
-  border-spacing: 2px;
-}
-
-textarea {
-  height: 300px;
-}
-
 img.spinner {
   vertical-align: middle;
   width: 25px;
@@ -39,41 +12,40 @@ img.spinner {
   padding: 2px;
 }
 
+textarea#markdownTextArea {
+  font-family: monospace;
+  width: 100%;
+  height: 200px;
+}
 </style>
+
+<div class="block">
+
+<textarea READONLY id="markdownTextArea">
+<?= data ?>
+</textarea>
+
+</div>
+
+<div style="display: flex;">
+  <button style="align-self: flex-start;" class="action" onClick="copyMarkdownToClipboard(); google.script.host.close();">Copy to clipboard</button>
+  <button onClick="google.script.host.close();">Cancel</button>
+  <button style="margin-left: auto;" onClick="saveMarkdownToGoogleDrive();">Save to Google Drive</button>
+</div>
+
+<div id="msg" class="block">&nbsp;</div>
 
 <script>
 
   /**
     * Asynchronous client-side methods
     */
-  function saveMarkdownFromRange() {
+  function saveMarkdownToGoogleDrive() {
     onSavingMarkdown();
     google.script.run.withFailureHandler(onFailure)
       .withSuccessHandler(onSavedMarkdown)
-      .saveAsMarkdownFromRange();
+      .saveTextToGoogleDrive(<?= data ?>);
   }
-
-  function saveMarkdownFromSheet() {
-    onSavingMarkdown();
-    google.script.run.withFailureHandler(onFailure)
-      .withSuccessHandler(onSavedMarkdown)
-      .saveAsMarkdownFromSheet();
-  }
-
-  /**
-   * Update functions.
-   */
-
-  function updateFromRange() {
-    document.getElementById('msg').innerHTML = getUpdatingSpinner();
-    google.script.run.updateMarkdownFromRange();
-  }
-
-  function updateFrontSheet() {
-    document.getElementById('msg').innerHTML = getUpdatingSpinner();
-    google.script.run.updateMarkdownFromSheet();
-  }
-
 
   /**
     * Callback functions
@@ -101,13 +73,6 @@ img.spinner {
       + '<img src="https://cloud.githubusercontent.com/assets/7258373/7875115/981626ae-056d-11e5-82e0-0552852989ff.gif"'
       + '  title="loading" alt="loading" width="25" height="25" class="spinner" />'
       + '<b>Saving...</b>';
-  }
-
-  function getUpdatingSpinner() {
-    return '<br/>'
-      + '<img src="https://cloud.githubusercontent.com/assets/7258373/7875115/981626ae-056d-11e5-82e0-0552852989ff.gif"'
-      + '  title="loading" alt="loading" width="25" height="25" class="spinner" />'
-      + '<b>Updating...</b>';
   }
 
   function copyMarkdownToClipboard() {

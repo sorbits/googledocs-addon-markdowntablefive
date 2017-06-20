@@ -44,7 +44,6 @@ var product = {
   "author": "The Pffy Authors",
   "authorUrl": "https://github.com/pffy",
 
-  "sidebarTitle": "MarkdownTableMaker",
   "sidebarFilename": "MarkdownTableMakerSidebar",
 
   "exportTextFileExtension": ".txt",
@@ -68,91 +67,28 @@ var menuItems = {
  * Add-On UI/Menus
  **/
 
-// updates from Range
-function updateMarkdownFromRange() {
- convertRange_();
-}
-
-// updates from Sheet
-function updateMarkdownFromSheet() {
-  convertSheet_();
-}
-
-// saves Range as markdown, returns Google Drive URL
-function saveAsMarkdownFromRange() {
-
+// saves text to Google Drive and returns URL
+function saveTextToGoogleDrive(text) {
   var outfile = product.exportPrefix + '-'
     + getSheetName_() + '-'
     + generateFileId_() + product.exportMarkdownFileExtension;
 
-  var drv = DriveApp.createFile(outfile,
-    '' + convertMarkdownFromRange_(), MimeType.PLAIN_TEXT);
-
+  var drv = DriveApp.createFile(outfile, text, MimeType.PLAIN_TEXT);
   return drv.getUrl();
 }
 
-// saves Sheet as markdown, returns Google Drive URL
-function saveAsMarkdownFromSheet() {
-
-  var outfile = product.exportPrefix + '-'
-    + getSheetName_() + '-'
-    + generateFileId_() + product.exportMarkdownFileExtension;
-
-  var drv = DriveApp.createFile(outfile,
-    '' + convertMarkdownFromSheet_(), MimeType.PLAIN_TEXT);
-
-  return drv.getUrl();
-}
-
-// make Markdown safe to embed inside <textarea>
-function escapeSpecialCharacters_(markdown) {
-  return markdown.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-}
-
-// converts Range, displays sidebar
+// converts Range, displays modal dialog
 function convertRange_() {
-
-  var ui = HtmlService
-    .createHtmlOutputFromFile(product.sidebarFilename)
-    .setTitle(product.sidebarTitle);
-
-  ui.append(''
-    + '<div class="wrapper">'
-    + 'Range Only<br/>'
-    + '  <textarea READONLY id="markdownTextArea">'
-            + escapeSpecialCharacters_(convertMarkdownFromRange_().trim()) + '</textarea><br/>'
-    + '  <button class="action" onClick="copyMarkdownToClipboard();">Copy to Clipboard</button><br/>'
-    + '  <button onClick="saveMarkdownFromRange();">Save As Markdown</button><br/>'
-    + '  <button onClick="updateFromRange();">Update</button>'
-    + '  <div id="msg">&nbsp;</div>'
-    + '</div><!--div.wrapper->'
-  );
-
-  SpreadsheetApp.getUi()
-    .showSidebar(ui);
+  var ui = HtmlService.createTemplateFromFile(product.sidebarFilename);
+  ui.data = convertMarkdownFromRange_().trim();
+  SpreadsheetApp.getUi().showModalDialog(ui.evaluate(), 'Markdown source');
 }
 
-// converts entire sheet, displays sidebar
+// converts entire sheet, displays modal dialog
 function convertSheet_() {
-
-  var ui = HtmlService
-    .createHtmlOutputFromFile(product.sidebarFilename)
-    .setTitle(product.sidebarTitle);
-
-  ui.append(''
-    + '<div class="wrapper">'
-    + 'Entire Sheet<br/>'
-    + '  <textarea READONLY id="markdownTextArea">'
-            + escapeSpecialCharacters_(convertMarkdownFromSheet_().trim()) + '</textarea><br/>'
-    + '  <button class="action" onClick="copyMarkdownToClipboard();">Copy to Clipboard</button><br/>'
-    + '  <button onClick="saveMarkdownFromSheet();">Save As Markdown</button><br/>'
-    + '  '
-    + '  <div id="msg">&nbsp;</div>'
-    + '</div><!--div.wrapper->'
-  );
-
-  SpreadsheetApp.getUi()
-    .showSidebar(ui);
+  var ui = HtmlService.createTemplateFromFile(product.sidebarFilename);
+  ui.data = convertMarkdownFromSheet_().trim();
+  SpreadsheetApp.getUi().showModalDialog(ui.evaluate(), 'Markdown source');
 }
 
 // converts Markdown from the active Range
