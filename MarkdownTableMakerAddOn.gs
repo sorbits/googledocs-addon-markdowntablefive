@@ -27,8 +27,8 @@
 
 /**
  * name     : MarkdownTableMakerAddOn.gs
- * version  : 11
- * updated  : 2016-09-08
+ * version  : 12
+ * updated  : 2017-06-20
  * license  : http://unlicense.org/ The Unlicense
  * git      : https://github.com/pffy/googledocs-addon-markdowntablefive
  *
@@ -36,7 +36,7 @@
 var product = {
 
   "name": "MarkdownTableMaker",
-  "version": "11",
+  "version": "12",
 
   "license": "This is free, libre and open source software.",
   "licenseUrl": "http://unlicense.org/",
@@ -104,6 +104,11 @@ function saveAsMarkdownFromSheet() {
   return drv.getUrl();
 }
 
+// make Markdown safe to embed inside <textarea>
+function escapeSpecialCharacters_(markdown) {
+  return markdown.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+}
+
 // converts Range, displays sidebar
 function convertRange_() {
 
@@ -115,7 +120,7 @@ function convertRange_() {
     + '<div class="wrapper">'
     + 'Range Only<br/>'
     + '  <textarea READONLY>'
-            + convertMarkdownFromRange_().trim() + '</textarea><br/>'
+            + escapeSpecialCharacters_(convertMarkdownFromRange_().trim()) + '</textarea><br/>'
     + '  <button class="action" onClick="saveMarkdownFromRange();">Save As Markdown</button><br/>'
     + '  <button onClick="updateFromRange();">Update</button>'
     + '  <div id="msg">&nbsp;</div>'
@@ -137,7 +142,7 @@ function convertSheet_() {
     + '<div class="wrapper">'
     + 'Entire Sheet<br/>'
     + '  <textarea READONLY>'
-            + convertMarkdownFromSheet_().trim() + '</textarea><br/>'
+            + escapeSpecialCharacters_(convertMarkdownFromSheet_().trim()) + '</textarea><br/>'
     + '  <button class="action" onClick="saveMarkdownFromSheet();">Save As Markdown</button><br/>'
     + '  '
     + '  <div id="msg">&nbsp;</div>'
