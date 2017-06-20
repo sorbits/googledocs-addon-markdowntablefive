@@ -110,6 +110,11 @@ img.spinner {
       + '<b>Updating...</b>';
   }
 
+  function copyMarkdownToClipboard() {
+    var textarea = document.getElementById("markdownTextArea");
+    textarea.select();
+    document.execCommand('copy');
+  }
 
 </script>
 
